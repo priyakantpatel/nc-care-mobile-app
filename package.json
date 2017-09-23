@@ -6,9 +6,13 @@
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
-    "build": "ionic-app-scripts build",
+    "build": "ionic-app-scripts build && npm run cpy && npm run zip",
+    "build-backup": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
+    "cpy": "ncp ./config.xml ./www/config.xml && ncp resources www/resources",
+    "zip": "mkdir package & bestzip ./package/app.zip www/*",
     "ionic:build": "ionic-app-scripts build",
+    "ionic:build-backup": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve"
   },
   "dependencies": {
@@ -32,6 +36,8 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "2.1.4",
+    "bestzip": "^1.1.4",
+    "ncp": "^2.0.0",
     "typescript": "2.3.4"
   },
   "description": "An Ionic project"
