@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Connect Care
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <h1 (click)="cancerTypeVisibility=!cancerTypeVisibility">Select Cancer Type</h1>
+  <ion-list [style.display]="cancerTypeVisibility ? 'block' : 'none'">
+    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      ok {{ item }}
+    </button>
+  </ion-list>
+
+  <h1 (click)="treatmentVisibility=!treatmentVisibility" >Treatment Type</h1>
+  <ion-list [style.display]="treatmentVisibility ? 'block' : 'none'">
+    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      ok {{ item }}
+    </button>
+  </ion-list>
+
+</ion-content>
