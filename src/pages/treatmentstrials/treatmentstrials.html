@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Connect Care
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list radio-group [(ngModel)]="treatments">
+    <ion-item-divider color="light">
+      <h2>Treatments</h2>
+    </ion-item-divider>
+
+    <ion-item *ngFor="let item of items">
+        <ion-label>{{item}}</ion-label>
+        <ion-radio value="{{item}}"></ion-radio>
+      </ion-item>
+  </ion-list>
+
+  <button ion-button outline block (click)="next()">Next</button>
+</ion-content>

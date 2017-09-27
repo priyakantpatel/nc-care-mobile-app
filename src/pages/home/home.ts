@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { TestPage } from '../../pages/testpage/testpage';
+import { MoreInfoPage } from '../../pages/moreinfo/moreinfo';
 
 @Component({
   selector: 'page-home',
@@ -9,17 +9,16 @@ import { TestPage } from '../../pages/testpage/testpage';
 export class HomePage {
 
   items: any;
-  cancerTypeVisibility: boolean = false;
-  treatmentVisibility: boolean = false;
+  cancerTypeVisibility: boolean = true;
 
   constructor(private navCtrl: NavController) {
-    this.items = ['Ek', 'Be', 'Tran'];
+    this.items = ['Leukemia', 'Skin Cancer', 'Breast Cancer', 'Brain Tumors', 'Bone Cancer'];
   }
 
   itemSelected(item) {
     console.log(item);
 
-    this.navCtrl.push(TestPage, {
+    this.navCtrl.push(MoreInfoPage, {
       item: item
     });
   }

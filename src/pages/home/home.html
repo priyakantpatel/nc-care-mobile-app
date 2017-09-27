@@ -1,23 +1,20 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
       Connect Care
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding>
-  <h1 (click)="cancerTypeVisibility=!cancerTypeVisibility">Select Cancer Type</h1>
-  <ion-list [style.display]="cancerTypeVisibility ? 'block' : 'none'">
+<ion-content>
+  <!-- <h1 (click)="cancerTypeVisibility=!cancerTypeVisibility">Select Cancer Type</h1> -->
+  <!-- <ion-list [style.display]="cancerTypeVisibility ? 'block' : 'none'"> -->
+  <ion-list>
+    <ion-item-divider color="light">
+      <h2>Cancer type</h2>
+    </ion-item-divider>
+
     <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
-      ok {{ item }}
+      {{ item }}
     </button>
   </ion-list>
-
-  <h1 (click)="treatmentVisibility=!treatmentVisibility" >Treatment Type</h1>
-  <ion-list [style.display]="treatmentVisibility ? 'block' : 'none'">
-    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
-      ok {{ item }}
-    </button>
-  </ion-list>
-
 </ion-content>

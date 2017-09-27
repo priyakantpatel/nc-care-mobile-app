@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Connect Care
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+
+  <ion-list radio-group [(ngModel)]="ageGroup">
+    <ion-item-divider color="light">
+      <h2>What is your age group</h2>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>1 - 20</ion-label>
+      <ion-radio value="1"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>21 - 40</ion-label>
+      <ion-radio value="2"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>40 - 60</ion-label>
+      <ion-radio value="3"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>60+</ion-label>
+      <ion-radio value="4"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <ion-list radio-group [(ngModel)]="stage">
+    <ion-item-divider color="light">
+      <h2>Stage</h2>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>1</ion-label>
+      <ion-radio value="1"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>2</ion-label>
+      <ion-radio value="2"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>3</ion-label>
+      <ion-radio value="3"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>4+</ion-label>
+      <ion-radio value="4"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button outline block (click)="next()">Next</button>
+</ion-content>

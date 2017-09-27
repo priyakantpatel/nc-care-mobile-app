@@ -6,6 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { MoreInfoPage } from '../pages/moreinfo/moreinfo';
+import { TreatmentsTrialsPage } from '../pages/treatmentstrials/treatmentstrials';
 import { ProvidersPage } from '../pages/providers/providers';
 import { TestPage } from '../pages/testpage/testpage';
 
@@ -13,6 +15,8 @@ import { TestPage } from '../pages/testpage/testpage';
   declarations: [
     MyApp,
     HomePage,
+    MoreInfoPage,
+    TreatmentsTrialsPage,
     ProvidersPage,
     TestPage
   ],
@@ -24,6 +28,8 @@ import { TestPage } from '../pages/testpage/testpage';
   entryComponents: [
     MyApp,
     HomePage,
+    MoreInfoPage,
+    TreatmentsTrialsPage,
     ProvidersPage,
     TestPage
   ],
